@@ -14,6 +14,11 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      fontFamily: {
+        // Добавяме двата шрифта като част от Tailwind настройките
+        fredoka: ['Fredoka', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [
