@@ -12,7 +12,7 @@ const FredokaFont = Fredoka({
 
 const PoppinsFont = Poppins({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
