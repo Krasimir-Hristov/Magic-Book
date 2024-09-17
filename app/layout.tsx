@@ -7,7 +7,7 @@ import { Fredoka, Poppins } from 'next/font/google';
 
 const FredokaFont = Fredoka({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '500', '600', '700'],
 });
 
 const PoppinsFont = Poppins({
