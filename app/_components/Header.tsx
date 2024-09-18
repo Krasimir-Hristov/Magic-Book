@@ -10,8 +10,15 @@ import {
   NavbarMenuItem,
 } from '@nextui-org/navbar';
 import Image from 'next/image';
+import path from 'path';
 
 const Header = () => {
+  const MenuList = [
+    { name: 'Home', path: '/' },
+    { name: 'Create Book', path: '/create-book' },
+    { name: 'Explore Books', path: '/explore' },
+    { name: 'Contact Us', path: '/contact-us' },
+  ];
   return (
     <Navbar>
       <NavbarContent>
