@@ -1,5 +1,6 @@
 import { Button } from '@nextui-org/button';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Hero = () => {
@@ -29,12 +30,14 @@ const Hero = () => {
           <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[#FF7043]'>
             Time to Create Your Magical Book!
           </h2>
-          <Button
-            size='lg'
-            className='hover:text-[#FF7043] bg-blue-700 font-bold text-2xl p-8 text-white mt-6 md:mt-8 lg:mt-10'
-          >
-            Create your Book
-          </Button>
+          <Link href={'/create-book'}>
+            <Button
+              size='lg'
+              className='hover:text-[#FF7043] bg-blue-700 font-bold text-2xl p-8 text-white mt-6 md:mt-8 lg:mt-10'
+            >
+              Create your Book
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
