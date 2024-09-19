@@ -14,8 +14,8 @@ const Hero = () => {
       ></div>
 
       {/* Content */}
-      <div className='relative z-10 px-6 sm:px-12 md:px-24 lg:px-36 mt-10 h-screen flex flex-col justify-center items-center'>
-        <div className='text-center'>
+      <div className='relative z-10 px-6 sm:px-12 md:px-24 lg:px-36 mt-10 h-screen flex flex-col md:flex-row justify-center items-center'>
+        <div className='flex flex-col items-center text-center md:text-left md:items-start md:w-1/2'>
           <h2 className='text-3xl md:text-5xl lg:text-6xl text-[#1A237E] font-extrabold drop-shadow-lg'>
             Create your own Magical Book in Minutes
           </h2>
@@ -25,13 +25,13 @@ const Hero = () => {
             takes a few seconds!
           </p>
         </div>
-        <div className='mt-8'>
-          <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[#FF7043] text-center'>
+        <div className='mt-8 md:mt-0 md:w-1/2 text-center md:text-left'>
+          <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[#FF7043]'>
             Time to Create Your Magical Book!
           </h2>
           <Button
             size='lg'
-            className='hover:text-[#FF7043] bg-blue-700 text-white mt-6 md:mt-8 lg:mt-10 block mx-auto'
+            className='hover:text-[#FF7043] bg-blue-700 text-white mt-6 md:mt-8 lg:mt-10'
           >
             Create your Book
           </Button>
