@@ -14,30 +14,27 @@ const Hero = () => {
       ></div>
 
       {/* Content */}
-      <div className='relative z-10 px-10 md:px-28 lg:px-44 mt-10 h-screen flex items-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center'>
-          <div>
-            <h2 className='text-[70px] text-[#1A237E] font-extrabold drop-shadow-lg'>
-              Create your own Magical Book in Minutes
-            </h2>
-            <p className='text-2xl text-purple-800 font-light mt-8'>
-              Create fun and personalised stories that bring your child's
-              adventures to life and spark their passion for reading. It only
-              takes a few seconds!
-            </p>
-          </div>
-          <div>
-            <h2 className='text-3xl font-semibold text-[#FF7043]'>
-              Time to Create Your Magical Book!
-            </h2>
-            <Button
-              size='lg'
-              className='hover:text-[#FF7043] bg-blue-700 text-white mt-10'
-            >
-              {' '}
-              Create your Book
-            </Button>
-          </div>
+      <div className='relative z-10 px-6 sm:px-12 md:px-24 lg:px-36 mt-10 h-screen flex flex-col justify-center items-center'>
+        <div className='text-center'>
+          <h2 className='text-3xl md:text-5xl lg:text-6xl text-[#1A237E] font-extrabold drop-shadow-lg'>
+            Create your own Magical Book in Minutes
+          </h2>
+          <p className='text-lg md:text-xl lg:text-2xl text-purple-800 font-light mt-4 md:mt-6 lg:mt-8'>
+            Create fun and personalised stories that bring your child's
+            adventures to life and spark their passion for reading. It only
+            takes a few seconds!
+          </p>
+        </div>
+        <div className='mt-8'>
+          <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[#FF7043] text-center'>
+            Time to Create Your Magical Book!
+          </h2>
+          <Button
+            size='lg'
+            className='hover:text-[#FF7043] bg-blue-700 text-white mt-6 md:mt-8 lg:mt-10 block mx-auto'
+          >
+            Create your Book
+          </Button>
         </div>
       </div>
     </div>
