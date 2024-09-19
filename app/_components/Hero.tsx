@@ -31,7 +31,7 @@ const Hero = () => {
           </h2>
           <Button
             size='lg'
-            className='hover:text-[#FF7043] bg-blue-700 text-white mt-6 md:mt-8 lg:mt-10'
+            className='hover:text-[#FF7043] bg-blue-700 font-bold text-2xl p-8 text-white mt-6 md:mt-8 lg:mt-10'
           >
             Create your Book
           </Button>
