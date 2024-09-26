@@ -15,6 +15,7 @@ import Image from 'next/image';
 import path from 'path';
 import Link from 'next/link';
 import { Button } from '@nextui-org/button';
+import { useUser } from '@clerk/nextjs';
 
 const Header = () => {
   const menuList = [
@@ -23,6 +24,8 @@ const Header = () => {
     { name: 'Explore Books', path: '/explore' },
     { name: 'Contact Us', path: '/contact-us' },
   ];
+
+  const { user, isSignedIn } = useUser();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
