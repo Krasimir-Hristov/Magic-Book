@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 bg-[#6c7878] min-h-screen'>
+    <div className='grid grid-cols-1 md:grid-cols-2 bg-[#6c7878] min-h-screen overflow-hidden'>
       {/* Image container */}
       <div className='flex justify-center items-center p-4 md:p-8'>
         <Image
