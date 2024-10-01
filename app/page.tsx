@@ -6,7 +6,6 @@ import Hero from './_components/Hero';
 const Home = () => {
   return (
     <div className='bg-[#80adaf]'>
-      <Header />
       <Hero />
     </div>
   );
