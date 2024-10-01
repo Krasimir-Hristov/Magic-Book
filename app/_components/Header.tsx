@@ -15,7 +15,7 @@ import Image from 'next/image';
 import path from 'path';
 import Link from 'next/link';
 import { Button } from '@nextui-org/button';
-import { useUser } from '@clerk/nextjs';
+import { UserButton, useUser } from '@clerk/nextjs';
 
 const Header = () => {
   const menuList = [
@@ -65,6 +65,8 @@ const Header = () => {
         <Button className='hover:text-[#FF7043] bg-blue-700 text-white'>
           {isSignedIn ? 'Dashboard' : 'Get Started'}
         </Button>
+
+        <UserButton />
       </NavbarContent>
 
       <NavbarMenu>
