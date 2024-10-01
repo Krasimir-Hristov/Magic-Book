@@ -2,6 +2,7 @@
 
 import React from 'react';
 import BookSubjectInput from './_components/BookSubjectInput';
+import BookType from './_components/BookType';
 
 interface fieldData {
   fieldName: string;
@@ -27,7 +28,7 @@ const CreateBook = () => {
         {/* Book Subject */}
         <BookSubjectInput userSelection={onHandleUserSelection} />
         {/* Book Type */}
-
+        <BookType />
         {/* Age Group */}
 
         {/* Image Style */}
