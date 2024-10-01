@@ -1,6 +1,18 @@
+'use client';
+
 import React from 'react';
+import BookSubjectInput from './_components/BookSubjectInput';
+
+interface fieldData {
+  fieldName: string;
+  fieldValue: string;
+}
 
 const CreateBook = () => {
+  const onHandleUserSelection = (data: fieldData) => {
+    console.log(data);
+  };
+
   return (
     <div className='bg-[#80adaf] p-10 md:px-20 lg:px-40'>
       <h2 className='font-extrabold  text-[70px] text-[#1A237E] text-center'>
@@ -13,7 +25,7 @@ const CreateBook = () => {
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-14'>
         {/* Book Subject */}
-
+        <BookSubjectInput userSelection={onHandleUserSelection} />
         {/* Book Type */}
 
         {/* Age Group */}
