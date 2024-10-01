@@ -62,9 +62,11 @@ const Header = () => {
         ))}
       </NavbarContent>
       <NavbarContent justify='end'>
-        <Button className='hover:text-[#FF7043] bg-blue-700 text-white'>
-          {isSignedIn ? 'Dashboard' : 'Get Started'}
-        </Button>
+        <Link href={'/dashboard'}>
+          <Button className='hover:text-[#FF7043] bg-blue-700 text-white'>
+            {isSignedIn ? 'Dashboard' : 'Get Started'}
+          </Button>
+        </Link>
 
         <UserButton />
       </NavbarContent>
