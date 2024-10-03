@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 import { Textarea } from '@nextui-org/input';
@@ -19,7 +18,7 @@ const BookSubjectInput = ({ userSelection }: any) => {
         onChange={(e) =>
           userSelection({
             fieldValue: e.target.value,
-            fieldName: 'bookSubject',
+            fieldName: 'storySubject',
           })
         }
       />

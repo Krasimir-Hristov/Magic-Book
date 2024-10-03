@@ -35,7 +35,7 @@ const BookType = ({ userSelection }: any) => {
 
     userSelection({
       fieldValue: item?.label,
-      fieldName: 'bookType',
+      fieldName: 'storyType',
     });
   };
   return (
