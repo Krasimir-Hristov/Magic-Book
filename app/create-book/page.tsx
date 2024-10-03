@@ -4,6 +4,7 @@ import React from 'react';
 import BookSubjectInput from './_components/BookSubjectInput';
 import BookType from './_components/BookType';
 import AgeGroup from './_components/AgeGroup';
+import ImageStyle from './_components/ImageStyle';
 
 interface fieldData {
   fieldName: string;
@@ -33,6 +34,7 @@ const CreateBook = () => {
         {/* Age Group */}
         <AgeGroup />
         {/* Image Style */}
+        <ImageStyle />
       </div>
     </div>
   );
