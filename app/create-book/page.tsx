@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import BookSubjectInput from './_components/BookSubjectInput';
 import BookType from './_components/BookType';
 import AgeGroup from './_components/AgeGroup';
@@ -12,10 +12,29 @@ export interface fieldData {
   fieldValue: string;
 }
 
+export interface formDataType {
+  storySubject: string;
+  storyType: string;
+  imageStyle: string;
+  ageGroup: string;
+}
+
 const CreateBook = () => {
+  const [formData, setFormData] = useState<formDataType>({
+    storySubject: '',
+    storyType: '',
+    imageStyle: '',
+    ageGroup: '',
+  });
+
   const onHandleUserSelection = (data: fieldData) => {
-    console.log(data);
+    setFormData((prev: formDataType) => ({
+      ...prev,
+      [data.fieldName]: data.fieldValue,
+    }));
   };
+
+  console.log('Form Data Updated:', formData);
 
   return (
     <div className='bg-[#80adaf] p-10 md:px-20 lg:px-40'>
