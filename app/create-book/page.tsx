@@ -5,6 +5,7 @@ import BookSubjectInput from './_components/BookSubjectInput';
 import BookType from './_components/BookType';
 import AgeGroup from './_components/AgeGroup';
 import ImageStyle from './_components/ImageStyle';
+import { Button } from '@nextui-org/button';
 
 export interface fieldData {
   fieldName: string;
@@ -35,6 +36,12 @@ const CreateBook = () => {
         <AgeGroup userSelection={onHandleUserSelection} />
         {/* Image Style */}
         <ImageStyle userSelection={onHandleUserSelection} />
+      </div>
+
+      <div className='flex justify-end my-10'>
+        <Button className='hover:text-[#FF7043] bg-blue-700 text-white p-10 text-2xl'>
+          Generate Book
+        </Button>
       </div>
     </div>
   );
