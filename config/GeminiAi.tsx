@@ -34,7 +34,7 @@ export const chatSession = model.startChat({
       role: 'user',
       parts: [
         {
-          text: 'Create kids story on description for 0-5 Years kids, Educational story, and all images in Paper cut style: story of boy and Magic School, give me 5 chapters, With detailed image text prompt for each of chapter and image prompt for story cover book with story name, all in JSON field format.',
+          text: 'Create kids story on description for 0-5 Years kids, Educational story, and all images in Paper cut style: story of boy and Magic School, give me 5 chapters, With detailed image text prompt for each of chapter and image  prompt for story cover book with story name, all in JSON field format.',
         },
       ],
     },
