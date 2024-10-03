@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { OptionField } from './BookType';
 
-const ImageStyle = () => {
+const ImageStyle = ({ userSelection }: any) => {
   const optionList = [
     {
       label: '3D Cartoon',
@@ -27,6 +28,14 @@ const ImageStyle = () => {
 
   const [selectedOption, setSelectedOption] = useState<string>('');
 
+  const onUserSelect = (item: OptionField) => {
+    setSelectedOption(item.label);
+
+    userSelection({
+      fieldValue: item?.label,
+      fieldName: 'imageStyle',
+    });
+  };
   return (
     <div>
       <label className='font-bold text-4xl text-[#1A237E]'>
@@ -41,7 +50,7 @@ const ImageStyle = () => {
                    ? 'grayscale-0 border-2 rounded-3xl border-[#1A237E]'
                    : 'grayscale'
                }`}
-            onClick={() => setSelectedOption(item.label)}
+            onClick={() => onUserSelect(item)}
           >
             <h2 className='absolute bottom-5 text-white text-xl font-bold text-center w-full'>
               {item.label}

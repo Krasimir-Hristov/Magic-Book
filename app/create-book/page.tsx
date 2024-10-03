@@ -30,11 +30,11 @@ const CreateBook = () => {
         {/* Book Subject */}
         <BookSubjectInput userSelection={onHandleUserSelection} />
         {/* Book Type */}
-        <BookType />
+        <BookType userSelection={onHandleUserSelection} />
         {/* Age Group */}
-        <AgeGroup />
+        <AgeGroup userSelection={onHandleUserSelection} />
         {/* Image Style */}
-        <ImageStyle />
+        <ImageStyle userSelection={onHandleUserSelection} />
       </div>
     </div>
   );
