@@ -6,7 +6,7 @@ import BookType from './_components/BookType';
 import AgeGroup from './_components/AgeGroup';
 import ImageStyle from './_components/ImageStyle';
 
-interface fieldData {
+export interface fieldData {
   fieldName: string;
   fieldValue: string;
 }
