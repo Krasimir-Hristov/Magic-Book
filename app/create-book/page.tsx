@@ -1,12 +1,20 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import BookSubjectInput from './_components/BookSubjectInput';
 import BookType from './_components/BookType';
 import AgeGroup from './_components/AgeGroup';
 import ImageStyle from './_components/ImageStyle';
+
 import { Button } from '@nextui-org/button';
+
 import { chatSession } from '@/config/GeminiAi';
+
+import { db } from '@/config/db';
+import { BookData } from '@/config/schema';
+//@ts-ignore
+import uuid4 from 'uuid4';
 
 const CREATE_STORY_PROMPT = process.env.NEXT_PUBLIC_CREATE_STORY_PROMPT;
 
@@ -55,6 +63,9 @@ const CreateBook = () => {
     try {
       const result = await chatSession.sendMessage(FINAL_PROMPT);
       console.log(result?.response.text());
+      const res = await saveInDB(result?.response.text());
+      console.log(res);
+
       setLoading(false);
     } catch (e) {
       console.log(e);
@@ -62,6 +73,31 @@ const CreateBook = () => {
     }
     //save all in DB
     //generate Image
+  };
+
+  const saveInDB = async (output: string) => {
+    const recorId = uuid4();
+
+    setLoading(true);
+    try {
+      const result = await db
+        .insert(BookData)
+        .values({
+          storyId: recorId,
+          ageGroup: formData?.ageGroup,
+          imageStype: formData?.imageStyle,
+          storyType: formData?.storyType,
+          storySubject: formData?.storySubject,
+          output: JSON.parse(output),
+        })
+        .returning({ storyId: BookData?.storyId });
+
+      setLoading(false);
+      return result;
+    } catch (e) {
+      console.log(e);
+      setLoading(false);
+    }
   };
 
   return (
