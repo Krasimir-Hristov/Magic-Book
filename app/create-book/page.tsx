@@ -16,6 +16,7 @@ import { BookData } from '@/config/schema';
 //@ts-ignore
 import uuid4 from 'uuid4';
 import CustomLoader from './_components/CustomLoader';
+import axios from 'axios';
 
 const CREATE_STORY_PROMPT = process.env.NEXT_PUBLIC_CREATE_STORY_PROMPT;
 
@@ -63,9 +64,15 @@ const CreateBook = () => {
     //generate AI story
     try {
       const result = await chatSession.sendMessage(FINAL_PROMPT);
-      console.log(result?.response.text());
-      const res = await saveInDB(result?.response.text());
-      console.log(res);
+      const story = JSON.parse(result?.response.text());
+      const imageResponse = await axios.post('/api/generate-image', {
+        prompt: `A book cover in ${story?.cover_image?.style} style. The cover should depict: ${story?.cover_image?.description}. The title of the book "${story?.story_name}" should be in bold text, centered at the top of the image.`,
+      });
+
+      console.log(imageResponse?.data);
+
+      // const res = await saveInDB(story);
+      // console.log(res);
 
       setLoading(false);
     } catch (e) {
